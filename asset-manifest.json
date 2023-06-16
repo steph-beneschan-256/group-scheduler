@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/group-scheduler/static/css/main.679c263a.css",
+    "main.js": "/group-scheduler/static/js/main.3cb1b778.js",
+    "static/js/787.ff1e7287.chunk.js": "/group-scheduler/static/js/787.ff1e7287.chunk.js",
+    "index.html": "/group-scheduler/index.html",
+    "main.679c263a.css.map": "/group-scheduler/static/css/main.679c263a.css.map",
+    "main.3cb1b778.js.map": "/group-scheduler/static/js/main.3cb1b778.js.map",
+    "787.ff1e7287.chunk.js.map": "/group-scheduler/static/js/787.ff1e7287.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.679c263a.css",
+    "static/js/main.3cb1b778.js"
+  ]
+}
