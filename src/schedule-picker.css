@@ -1,0 +1,50 @@
+
+.schedule-picker {
+    width: 80%;
+    max-width: 600px;
+    margin: auto; 
+}
+  
+.schedule-picker-header {
+    width: 100%;
+}
+.schedule-picker-header button {
+    width: 25%;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #00000088;
+}
+.schedule-picker-header button:hover {
+    color: #000000;
+}
+.schedule-picker-header h3 {
+    display: inline-block;
+    width: 50%;
+}
+  
+.side-note {
+    opacity: 0.5;
+}
+  
+.time-ranges-list {
+    border: 1px solid #00000044;
+    width: 80%;
+    max-width: 360px;
+    margin: auto;
+}
+.time-range {
+    width: 100%;
+}
+.time-range-a {
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+.time-range-b {
+    display: inline-block;
+    text-align: right;
+}
+  

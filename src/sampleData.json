@@ -1,0 +1,33 @@
+{
+    "title": "My Event",
+    "id": "placeholder",
+    "users": {
+        "id1": {
+            "name": "user1",
+            "id": "placeholder",
+            "availability": [
+                16672,
+                0,
+                3584,
+                270208,
+                24576,
+                67584,
+                0
+            ]
+        },
+        "id2": {
+            "name": "user2",
+            "id": "placeholder",
+            "availability": [
+                0,
+                0,
+                37088,
+                262080,
+                0,
+                0,
+                17920
+            ]
+        }
+    
+    }
+}

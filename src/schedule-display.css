@@ -1,0 +1,189 @@
+
+.schedule-display {
+
+    width: 80%;
+    max-width: 600px;
+    margin-left: calc((100% - min(80%, 600px))/2);
+    height: 50vh;
+    border: solid 1px #00000088;
+    border-radius: 10px;
+    overflow: scroll;
+ 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  /*
+  Header row of the schedule display
+  Contains weekday names (Sun, Mon, etc.)
+  */
+  .schedule-header {
+    height: 10%;
+  }
+  .schedule-header-inner {
+    margin-left: 20%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-self: stretch;
+    height: 100%;
+  }
+  .schedule-header-label {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 1px;
+    padding-right: 1px;
+
+    overflow: hidden;
+  }
+  
+  /*
+  A container holding the rest of the schedule display table below the header
+  */
+  .schedule-body {
+    display: flex;
+    height: 90%;
+    overflow-y: scroll;
+  }
+  
+  /*
+  The leftmost column of the schedule body; contains the time labels (12am, 1am, etc.)
+  */
+  .timeline-labels {
+    width: 20%;
+    
+    display: flex;
+    flex-direction: column;
+  
+    align-items: stretch;
+    align-self: stretch;
+    min-height: 400px;
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+  }
+  
+  /*
+  Another column to the right of the timeline-labels column; contains the individual timeline columns for each and every weekday
+  */
+  .timeline-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: stretch;
+    align-self: stretch;
+    width: 80%;
+    min-height: 400px;
+    height: 100%;
+    overflow: scroll;
+  
+  }
+  /* A time label (12am, 1am, etc.) */
+  .time-label {
+    display: flex;
+    border-top: 1px solid #00000088;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    justify-content: end;
+    padding-right: 0.25rem;
+  }
+  
+  /*
+  A column containing tiles for a given weekday
+  */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+
+    position: relative;
+  }
+  /* A tile for a given weekday at a specific time */
+  .timeslot {
+    display: flex;
+    border-top: 1px solid #00000088;
+    overflow: hidden;
+    height: 100%;
+
+    padding-left: 2px;
+    padding-right: 1px;
+    border-left: 1px solid #00000088;
+  }
+  /* For a weekday and time during which the user has indicated that they are available*/
+  .timeslot-available {
+    background-color: rgba(0, 128, 0, 0.103);
+  }
+
+  .schedule-header-label:hover {
+    cursor: pointer;
+  }
+  .weekday-selected {
+    background-color: blue;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    border-bottom: 1px solid blue;
+    color: white;
+    font-weight: bold;
+  }
+  .weekday-selected + .schedule-header-label {
+    padding-left: 0px;
+    border-left: 1px solid blue;
+  }
+  
+  /* Column corresponding to the weekday that the user is currently editing */
+  /* .column-selected {
+
+  } */
+  .timeline:hover {
+    cursor: pointer;
+  }
+  .column-selected .timeslot {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: 2px solid blue;
+    border-right: 1px solid blue;
+  }
+  .column-selected+.timeline .timeslot {
+    padding-left: 0px;
+    border-left: 1px solid blue;
+  }
+
+
+/*
+  On smaller screens, only show some of the time labels, and truncate the weekday labels
+*/
+
+@media only screen and (max-width: 450px) {
+  .time-label {
+    font-size: 3vw;
+  }
+  .schedule-header-label {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-height:800px) {
+    .time-label:nth-of-type(n+12) {
+      display: none;
+    }
+}
+
+@media only screen and (max-height:1200px) {
+    .time-label:nth-of-type(2n) {
+        display: none;
+    }
+}
