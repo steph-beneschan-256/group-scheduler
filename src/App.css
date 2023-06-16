@@ -13,6 +13,28 @@
 }
 
 
+.App-header div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 1px solid #00000088;
+}
+
+.App-header img {
+  margin: 1%;
+  max-height: 150px;
+  aspect-ratio: 1;
+  display: inline-block;
+}
+
+.App-header h1 {
+  text-align: center;
+  display: inline-block;
+}
+
+
 .name-entry-widget {
   border-top: solid 1px #00000044;
   border-bottom: solid 1px #00000044;

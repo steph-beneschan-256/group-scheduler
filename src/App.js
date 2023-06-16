@@ -188,9 +188,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Group Scheduler
-        </p>
+        <div>
+          <img src="clocks.svg" alt=""></img>
+          <h1>
+            Group Scheduler
+          </h1>
+        </div>
       </header>
       <div className="App-body">
 
